@@ -13,6 +13,32 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* 모바일 전용 컨테이너 */
+main {
+  width: 100%;
+  max-width: 430px; /* 일반적인 모바일 최대 너비 */
+  min-height: 100vh;
+  background-color: var(--background);
+  margin: 0 auto;
+  padding: 0 16px; /* 좌우 여백 */
+  box-sizing: border-box;
+}
+
+/* 데스크톱에서 모바일 레이아웃 유지 */
+@media (min-width: 431px) {
+  body {
+    background-color: #000; /* 모바일 화면 외 영역 색상 */
+  }
+  
+  main {
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+  }
 }
 
 a {
